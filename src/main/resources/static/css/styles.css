@@ -1,0 +1,148 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+    color: #2d2d2d;
+}
+
+h1 {
+    text-align: center;
+    color: #7e57c2; 
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+table {
+    width: 98%;
+    margin: 30px auto; 
+    border-collapse: collapse;
+    border: 2px solid #7e57c2; 
+    background: linear-gradient(135deg, #f3e5f5, #d1c4e9); 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 16px;
+    text-align: left;
+    border: 1px solid #7e57c2; 
+    font-size: 16px;
+    color: #333;
+}
+
+table th {
+    background-color: #7e57c2; 
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+table td {
+    background: linear-gradient(135deg, #ede7f6, #e8eaf6); 
+}
+
+table tr:nth-child(even) td {
+    background: linear-gradient(135deg, #d1c4e9, #c5cae9); 
+}
+
+table tr:hover {
+    background-color: #b39ddb; 
+    transition: background-color 0.3s ease;
+}
+
+
+button {
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    margin: 20px 10px;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:nth-child(1) {
+    background-color: #ab47bc;
+}
+
+button:nth-child(2) {
+    background-color: #9575cd; 
+}
+
+button:nth-child(3) {
+    background-color: #ba68c8;
+}
+
+button:nth-child(4) {
+    background-color: #ce93d8; 
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:nth-child(1):hover {
+    background-color: #9c27b0; 
+}
+
+button:nth-child(2):hover {
+    background-color: #7e57c2;
+}
+
+button:nth-child(3):hover {
+    background-color: #aa00ff; 
+}
+
+button:nth-child(4):hover {
+    background-color:  #aa00ff; 
+}
+
+
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    table th, table td {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+button {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button a {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+body {
+    line-height: 1.6;
+}
+
