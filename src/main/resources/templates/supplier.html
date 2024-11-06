@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Supplier</title>
+     <link rel="stylesheet" th:href="@{css/styles.css}">
+</head>
+<body>
+    <h1>List Supplier</h1>
+
+    <a href="/add-supplier"><button>Add New Supplier</button> </a>
+
+    <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nama Supplier</th>
+                <th>Alamat</th>
+                <th>Telepon</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Menampilkan data supplier -->
+            <tr th:each="supplier : ${suppliers}">
+                <td th:text="${supplier.id}"></td>
+                <td th:text="${supplier.name}"></td>
+                <td th:text="${supplier.address}"></td>
+                <td th:text="${supplier.phone}"></td>
+                <td>
+                    <a th:href="@{'/update-supplier/' + ${supplier.id}}"><button>Edit</button></a> |
+                    <a th:href="@{'/delete-supplier/' + ${supplier.id}}"
+                       onclick="return confirm('Apakah Anda yakin ingin menghapus supplier ini?');"><button>Delete</button></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="category"><button>Category</button></a>
+    <a href="home"><button>Home</button></a>
+</body>
+</html>

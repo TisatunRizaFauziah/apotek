@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Category</title>
+    <link rel="stylesheet" th:href="@{css/update.css}">
+
+</head>
+<body>
+    <h1>Update Kategori</h1>
+
+    <form th:action="@{/update-category/{id}(id=${category.id})}" th:object="${category}" method="post">
+        <div>
+            <label for="name">Nama Kategori:</label>
+            <input type="text" id="name" th:field="*{name}" required/>
+        </div>
+        <div>
+            <label for="description">Deskripsi:</label>
+            <textarea id="description" th:field="*{description}" required></textarea>
+        </div>
+        <div>
+            <button type="submit">Update Kategori</button>
+            <a href="/category">Kembali ke Daftar Kategori</a>
+        </div>
+    </form>
+</body>
+</html>

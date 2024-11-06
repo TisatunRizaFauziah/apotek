@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Supplier</title>
+</head>
+<body>
+    <h1>Update Supplier</h1>
+
+    <form th:action="@{/update-supplier/{id}(id=${supplier.id})}" th:object="${supplier}" method="post">
+        <div>
+            <label for="name">Nama Supplier:</label>
+            <input type="text" id="name" th:field="*{name}" required/>
+        </div>
+        <div>
+            <label for="address">Alamat:</label>
+            <input type="text" id="address" th:field="*{address}" required/>
+        </div>
+        <div>
+            <label for="phone">Telepon:</label>
+            <input type="text" id="phone" th:field="*{phone}" required/>
+        </div>
+        <div>
+            <button type="submit">Update Supplier</button>
+            <a href="/supplier">Kembali ke Daftar Supplier</a>
+        </div>
+    </form>
+</body>
+</html>

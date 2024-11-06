@@ -27,4 +27,7 @@ public class ObatService {
     public List<Obat> getAllObat() {
         return obatRepository.findAll();
     }
+     public Obat findById(Integer id) {
+        return obatRepository.findById(id).orElse(null);
+    }
 }

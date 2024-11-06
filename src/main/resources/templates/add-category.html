@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Category</title>
+    <link rel="stylesheet" th:href="@{css/tampilan.css}">
+
+</head>
+<body>
+    <button>Add New Category</button>
+
+    <form th:action="@{/save-category}" th:object="${category}" method="post">
+        <div>
+            <label for="name">Category Name:</label>
+            <input type="text" id="name" th:field="*{name}" required/>
+        </div>
+        <div>
+            <label for="description">Description:</label>
+            <textarea id="description" th:field="*{description}" required></textarea>
+        </div>
+        <div>
+            <button type="submit">Save Category</button>
+            
+        </div>
+    </form>
+    <a href="/category"><button>Back</button></a>
+</body>
+</html>

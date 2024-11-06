@@ -1,0 +1,65 @@
+/* styleAdd.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Warna latar belakang abu-abu muda */
+    color: #4b0082; /* Warna teks ungu */
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #6a0dad; /* Warna ungu lebih gelap untuk judul */
+}
+
+form {
+    background-color: #fff; /* Warna latar belakang form putih */
+    border: 1px solid #ccc; /* Garis batas abu-abu */
+    border-radius: 5px; /* Sudut melengkung */
+    padding: 20px;
+    max-width: 400px; /* Lebar maksimal form */
+    margin: auto; /* Memusatkan form */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+}
+
+label {
+    display: block; /* Menampilkan label dalam blok */
+    margin-bottom: 5px; /* Jarak bawah label */
+}
+
+input[type="text"],
+textarea {
+    width: 100%; /* Lebar penuh */
+    padding: 10px; /* Jarak dalam */
+    margin-bottom: 15px; /* Jarak bawah elemen */
+    border: 1px solid #ccc; /* Garis batas abu-abu */
+    border-radius: 4px; /* Sudut melengkung */
+    box-sizing: border-box; /* Menghitung padding dalam lebar */
+}
+
+button {
+    background-color: #6a0dad; /* Warna tombol ungu */
+    color: white; /* Warna teks tombol putih */
+    padding: 10px 15px; /* Jarak dalam tombol */
+    border: none; /* Tanpa garis batas */
+    border-radius: 5px; /* Sudut melengkung */
+    cursor: pointer; /* Kursor tangan saat hover */
+    transition: background-color 0.3s; /* Transisi halus untuk warna latar */
+}
+
+button:hover {
+    background-color: #5a0c9a; /* Warna ungu lebih gelap saat hover */
+}
+
+a {
+    text-decoration: none; /* Tanpa garis bawah */
+    color: #4b0082; /* Warna ungu untuk tautan */
+    display: inline-block; /* Menampilkan tautan dalam blok */
+    margin-top: 10px; /* Jarak atas tautan */
+    text-align: center; /* Memusatkan teks */
+}
+
+a:hover {
+    text-decoration: underline; /* Garis bawah saat hover */
+}

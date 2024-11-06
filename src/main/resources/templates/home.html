@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar Obat</title>
+    <title>List Obat</title>
     <link rel="stylesheet" th:href="@{css/styles.css}">
 </head>
 <body>
@@ -16,6 +16,8 @@
                 <th>Nama</th>
                 <th>Price</th>
                 <th>Description</th>
+                <th>Category</th>
+                <th>Supplier</th>
                 <th>Aksi</th>
             </tr>
         </thead>
@@ -26,12 +28,17 @@
                     <td th:text="${obat.namaObat}"></td>
                     <td th:text="${obat.price}"></td>
                     <td th:text="${obat.description}"></td>
+                    <td th:text="${obat.category.name}"></td>
+                    <td th:text="${obat.supplier.name}"></td>
                     <td>
-                        <a th:href="@{/delete-obat/{id}(id=${obat.id})}">Hapus</a>
+                        <a th:href="@{/delete-obat/{id}(id=${obat.id})}"><button>Delete</button></a>
+                        <a th:href="@{/update-obat/{id}(id=${obat.id})}"><button>Update</button></a>
                     </td>
                 </tr>
             </th:block>
         </tbody>
     </table>
+    <a href="category"><button>Category</button></a>
+    <a href="supplier"><button>Supplier</button></a>
 </body>
 </html>

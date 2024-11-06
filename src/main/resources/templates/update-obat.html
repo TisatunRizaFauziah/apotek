@@ -3,43 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Obat</title>
-    <link rel="stylesheet" th:href="@{css/tampilan.css}">
+    <title>Update Obat</title>
+    <link rel="stylesheet" th:href="@{css/update.css}">
 </head>
 <body>
-    <h1>Add New Obat</h1>
+    <h1>Update Obat</h1>
 
-    <form th:action="@{/save-obat}" th:object="${obat}" method="post">
+    <form th:action="@{/update-obat/{id}(id=${obat.id})}" th:object="${obat}" method="post">
         <div>
             <label for="namaObat">Nama Obat:</label>
             <input type="text" id="namaObat" th:field="*{namaObat}" required/>
         </div>
         <div>
-            <label for="price">Price :</label>
+            <label for="price">Harga:</label>
             <input type="number" id="price" th:field="*{price}" required/>
         </div>
         <div>
-            <label for="description">Description:</label>
+            <label for="description">Deskripsi:</label>
             <textarea id="description" th:field="*{description}" required></textarea>
         </div>
         <div>
-            <label for="category">Category:</label>
+            <label for="category">Kategori:</label>
             <select id="category" th:field="*{category}" required>
-                <option value="" disabled selected>Select Category</option>
                 <option th:each="category : ${categories}" th:value="${category.id}" th:text="${category.name}"></option>
             </select>
         </div>
         <div>
             <label for="supplier">Supplier:</label>
             <select id="supplier" th:field="*{supplier}" required>
-                <option value="" disabled selected>Select Supplier</option>
                 <option th:each="supplier : ${suppliers}" th:value="${supplier.id}" th:text="${supplier.name}"></option>
             </select>
         </div>
         <div>
-            <button type="submit">Save Obat</button>
+            <button type="submit">Update Obat</button>
+            <a href="/home">Kembali ke Daftar Obat</a>
         </div>
     </form>
-    <a href="/home"><button>Back</button></a>
 </body>
 </html>
